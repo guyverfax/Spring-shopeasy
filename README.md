@@ -52,5 +52,29 @@ src/main/resources/ <br>
 # 🗃 資料庫設計（MySQL）
 ![image](images/資料庫設計.png)
 
+# 🔄 程式流程設計（Flow Design）
+以下將以幾個核心功能為例，說明前後端的互動流程與設計邏輯。<br>
+🔐 使用者註冊與登入流程<br>
+[使用者] → (填寫表單) → /auth/register<br>
+               ↓<br>
+         [RegisterController]<br>
+               ↓<br>
+      [UserService.register()]<br>
+               ↓<br>
+         驗證帳號、密碼格式<br>
+               ↓<br>
+     加密密碼 → 存入資料庫 (UserRepository)<br>
+               ↓<br>
+    回傳註冊成功 → 導向登入頁面<br>
+
+[使用者] → /auth/login.html → 提交帳密登入<br>
+               ↓<br>
+      [Spring Security Login Filter]<br>
+               ↓<br>
+       若帳密正確 → 判斷是否設定二階段驗證<br>
+               ↓<br>
+   若有設定：導向 /auth/verify-totp.html → 輸入驗證碼<br>
+               ↓<br>
+      [TOTPUtil.validateCode()] → 成功 → 登入成功<br>
 
 
