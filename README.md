@@ -77,4 +77,13 @@ src/main/resources/ <br>
                ↓<br>
       [TOTPUtil.validateCode()] → 成功 → 登入成功<br>
 
-
+## 🛒 加入購物車流程
+[使用者] → 點選「加入購物車」<br>
+               ↓<br>
+       /cart/add?productId=XXX<br>
+               ↓<br>
+         [CartController.addToCart()]<br>
+               ↓<br>
+        呼叫 CartService 將商品加入 Session 中的購物車<br>
+               ↓<br>
+      返回購物車頁面（cart.html）顯示商品列表<br>
