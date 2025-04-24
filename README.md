@@ -26,24 +26,21 @@ Shopeasy 是一個基於 Spring Boot + Thymeleaf 的線上購物網站，支援�
 本專案採用典型的 Spring Boot 三層架構（Controller、Service、Repository）與 Thymeleaf 前端模板整合，並搭配以下技術：
 ![image](images/技術架構總覽表.jpg)
 
-
-
-
 ## 📁 專案分層架構
-src/main/java/com/example/shopeasy/
-├── config/           # 配置類（如 WebConfig）
-├── controller/       # 控制層 - 處理 HTTP 請求與頁面導向
-├── dto/              # DTO 層 - 資料傳輸物件（如 CartDTO）
-├── model/            # 資料模型 - 對應資料庫的 Entity
-├── repository/       # 資料存取層 - JPA Repository
-├── service/          # 服務層 - 商業邏輯處理
-└── util/             # 工具類 - 如 Google Auth 驗證工具
+src/main/java/com/example/shopeasy/ <br>
+├── config/           # 配置類（如 WebConfig） <br>
+├── controller/       # 控制層 - 處理 HTTP 請求與頁面導向 <br>
+├── dto/              # DTO 層 - 資料傳輸物件（如 CartDTO）<br>
+├── model/            # 資料模型 - 對應資料庫的 Entity <br>
+├── repository/       # 資料存取層 - JPA Repository <br>
+├── service/          # 服務層 - 商業邏輯處理 <br>
+└── util/             # 工具類 - 如 Google Auth 驗證工具 <br>
 
-src/main/resources/
-├── static/           # 靜態資源（CSS、JS、圖片）
-├── templates/        # Thymeleaf 模板 HTML
-└── application.properties  # 系統設定檔
+src/main/resources/ <br>
+├── static/           # 靜態資源（CSS、JS、圖片）<br>
+├── templates/        # Thymeleaf 模板 HTML <br>
+└── application.properties  # 系統設定檔 <br>
 
-src/test/java/        # 單元測試
+src/test/java/        # 單元測試 <br>
 
 
