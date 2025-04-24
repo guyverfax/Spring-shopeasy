@@ -89,26 +89,26 @@ src/main/resources/ <br>
       返回購物車頁面（cart.html）顯示商品列表<br>
 
 ## 🧾 建立訂單流程
-[使用者] → 點擊「結帳」按鈕
+[使用者] → 點擊「結帳」按鈕<br>
+               ↓<br>
+           /order/checkout<br>
+               ↓<br>
+        [OrderController.checkout()]<br>
                ↓
-           /order/checkout
-               ↓
-        [OrderController.checkout()]
-               ↓
-  → OrderService.createOrder(user, cart)
-       ↓                      ↓
-   檢查庫存             建立 Order 與 OrderItem 實體
-       ↓                      ↓
-    扣除庫存          儲存訂單至資料庫 (OrderRepository)
-               ↓
-           回傳訂單成功頁面
+  → OrderService.createOrder(user, cart)<br>
+       ↓                      ↓<br>
+   檢查庫存             建立 Order 與 OrderItem 實體<br>
+       ↓                      ↓<br>
+    扣除庫存          儲存訂單至資料庫 (OrderRepository)<br>
+               ↓<br>
+           回傳訂單成功頁面<br>
 
 ## 📦 管理後台 - 商品新增流程
-[Admin] → adminproduct.html → 上傳商品資料 + 圖片
+[Admin] → adminproduct.html → 上傳商品資料 + 圖片<br>
                ↓
-        [AdminProductController.addProduct()]
+        [AdminProductController.addProduct()]<br>
                ↓
-     呼叫 ProductService 儲存圖片與商品資訊
+     呼叫 ProductService 儲存圖片與商品資訊<br>
                ↓
         → 儲存圖片至資料夾
         → 存入 product 資料表
