@@ -87,3 +87,31 @@ src/main/resources/ <br>
         呼叫 CartService 將商品加入 Session 中的購物車<br>
                ↓<br>
       返回購物車頁面（cart.html）顯示商品列表<br>
+
+## 🧾 建立訂單流程
+[使用者] → 點擊「結帳」按鈕
+               ↓
+           /order/checkout
+               ↓
+        [OrderController.checkout()]
+               ↓
+  → OrderService.createOrder(user, cart)
+       ↓                      ↓
+   檢查庫存             建立 Order 與 OrderItem 實體
+       ↓                      ↓
+    扣除庫存          儲存訂單至資料庫 (OrderRepository)
+               ↓
+           回傳訂單成功頁面
+
+## 📦 管理後台 - 商品新增流程
+[Admin] → adminproduct.html → 上傳商品資料 + 圖片
+               ↓
+        [AdminProductController.addProduct()]
+               ↓
+     呼叫 ProductService 儲存圖片與商品資訊
+               ↓
+        → 儲存圖片至資料夾
+        → 存入 product 資料表
+               ↓
+        回傳成功 → 更新商品列表
+
