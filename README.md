@@ -1,7 +1,7 @@
 # 🛒 Shopeasy - Spring Boot 購物網站專案
 
 # 📌 專案目的
-本專案為一個以 Spring Boot 為核心架構，結合 Thymeleaf 前端模板引擎所開發的線上購物網站，主要目的是：<br
+本專案為一個以 Spring Boot 為核心架構，結合 Thymeleaf 前端模板引擎所開發的線上購物網站，主要目的是：
 
 🧑‍💻 學習與實作 Spring Boot 分層架構（Controller / Service / Repository / Model）<br>
 
