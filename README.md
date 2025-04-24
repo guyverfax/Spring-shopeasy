@@ -24,6 +24,9 @@ Shopeasy 是一個基於 Spring Boot + Thymeleaf 的線上購物網站，支援�
 
 # 🧱 系統架構
 本專案採用典型的 Spring Boot 三層架構（Controller、Service、Repository）與 Thymeleaf 前端模板整合，並搭配以下技術：
+![image](https://github.com/user-attachments/assets/deade5c4-8987-4ddc-97f1-06885c77cd1d)
+
+
 後端框架：Spring Boot
 資料存取：Spring Data JPA
 資料庫：MySQL
