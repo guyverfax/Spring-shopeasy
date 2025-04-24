@@ -109,9 +109,9 @@ src/main/resources/ <br>
         [AdminProductController.addProduct()]<br>
                ↓<br>
      呼叫 ProductService 儲存圖片與商品資訊<br>
-               ↓
-        → 儲存圖片至資料夾
-        → 存入 product 資料表
-               ↓
-        回傳成功 → 更新商品列表
+               ↓<br>
+        → 儲存圖片至資料夾<br>
+        → 存入 product 資料表<br>
+               ↓<br>
+        回傳成功 → 更新商品列表<br>
 
