@@ -49,4 +49,110 @@ src/main/resources/ <br>
 管理後台:	管理會員、訂單、商品、分類、報表 <br>
 視覺化報表:	圓餅圖、長條圖顯示用戶與訂單資訊 <br>
 
+# 🗃 資料庫設計（MySQL）
+![image](images/資料庫設計.png)
+
+# 🔄 程式流程設計（Flow Design）
+以下將以幾個核心功能為例，說明前後端的互動流程與設計邏輯。<br>
+## 🔐 使用者註冊與登入流程
+[使用者] → (填寫表單) → /auth/register <br>
+               ↓<br>
+         [RegisterController]<br>
+               ↓<br>
+      [UserService.register()]<br>
+               ↓<br>
+         驗證帳號、密碼格式<br>
+               ↓<br>
+     加密密碼 → 存入資料庫 (UserRepository)<br>
+               ↓<br>
+    回傳註冊成功 → 導向登入頁面<br>
+
+[使用者] → /auth/login.html → 提交帳密登入 <br>
+               ↓<br>
+      [Spring Security Login Filter]<br>
+               ↓<br>
+       若帳密正確 → 判斷是否設定二階段驗證<br>
+               ↓<br>
+   若有設定：導向 /auth/verify-totp.html → 輸入驗證碼<br>
+               ↓<br>
+      [TOTPUtil.validateCode()] → 成功 → 登入成功<br>
+
+## 🛒 加入購物車流程
+[使用者] → 點選「加入購物車」<br>
+               ↓<br>
+       /cart/add?productId=XXX<br>
+               ↓<br>
+         [CartController.addToCart()]<br>
+               ↓<br>
+        呼叫 CartService 將商品加入 Session 中的購物車<br>
+               ↓<br>
+      返回購物車頁面（cart.html）顯示商品列表<br>
+
+## 🧾 建立訂單流程
+[使用者] → 點擊「結帳」按鈕<br>
+               ↓<br>
+           /order/checkout<br>
+               ↓<br>
+        [OrderController.checkout()]<br>
+               ↓<br>
+  → OrderService.createOrder(user, cart)<br>
+       ↓                      ↓<br>
+   檢查庫存             建立 Order 與 OrderItem 實體<br>
+       ↓                      ↓<br>
+    扣除庫存          儲存訂單至資料庫 (OrderRepository)<br>
+               ↓<br>
+           回傳訂單成功頁面<br>
+
+## 📦 管理後台 - 商品新增流程
+[Admin] → adminproduct.html → 上傳商品資料 + 圖片<br>
+               ↓<br>
+        [AdminProductController.addProduct()]<br>
+               ↓<br>
+     呼叫 ProductService 儲存圖片與商品資訊<br>
+               ↓<br>
+        → <br>儲存圖片至資料夾<br>
+        → <br>存入 product 資料表<br>
+               ↓<br>
+        回傳成功 → 更新商品列表<br>
+
+# 🖥️ 使用介面介紹-前台
+## 🏠前台主頁
+![My Image](images/001-首頁.jpg)
+
+## 📝前台主頁-註冊
+![My Image](images/001-前台-註冊01.jpg)
+![My Image](images/001-前台-註冊02.jpg)
+![My Image](images/001-前台-註冊03.jpg)
+![My Image](images/001-前台-註冊04.jpg)
+![My Image](images/001-前台-註冊05.jpg)
+![My Image](images/001-前台-註冊06.jpg)
+
+## 📝前台主頁-登入
+![My Image](images/001-前台-登入01.jpg)
+![My Image](images/001-前台-登入02.jpg)
+
+## 📝前台主頁-商品列表
+![My Image](images/001-前台-商品列表01.jpg)
+
+## 📝前台主頁-購物說明
+![My Image](images/001-前台-購物01.jpg)
+![My Image](images/001-前台-購物02.jpg)
+![My Image](images/001-前台-購物03.jpg)
+![My Image](images/001-前台-購物04.jpg)
+![My Image](images/001-前台-購物05.jpg)
+![My Image](images/001-前台-購物06.jpg)
+![My Image](images/001-前台-購物07.jpg)
+![My Image](images/001-前台-購物08.jpg)
+![My Image](images/001-前台-購物09.jpg)
+![My Image](images/001-前台-購物10.jpg)
+
+## 📝前台主頁-個人訂單管理
+![My Image](images/001-前台-訂單管理01.jpg)
+![My Image](images/001-前台-訂單管理02.jpg)
+
+
+
+
+
+
 
