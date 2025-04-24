@@ -27,12 +27,7 @@ Shopeasy 是一個基於 Spring Boot + Thymeleaf 的線上購物網站，支援�
 ![image](images/技術架構總覽表.jpg)
 
 
-後端框架：Spring Boot
-資料存取：Spring Data JPA
-資料庫：MySQL
-前端技術：Thymeleaf、HTML/CSS/JS、jQuery
-安全性：Spring Security + Google Authenticator 二階段驗證
-圖表呈現：Chart.js、Google Chart
+
 
 ## 📁 專案分層架構
 src/main/java/com/example/shopeasy/
