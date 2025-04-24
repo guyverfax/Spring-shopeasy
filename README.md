@@ -41,6 +41,12 @@ src/main/resources/ <br>
 ├── templates/        # Thymeleaf 模板 HTML <br>
 └── application.properties  # 系統設定檔 <br>
 
-src/test/java/        # 單元測試 <br>
+# 🔐 主要功能模組
+會員管理:	註冊、登入、登出、二階段驗證、個人資訊修改 <br>
+商品管理:	商品新增、編輯、上傳圖片、前後台瀏覽 <br>
+購物車功能:	加入/移除商品、結帳功能 <br>
+訂單模組:	建立訂單、訂單明細查詢 <br>
+管理後台:	管理會員、訂單、商品、分類、報表 <br>
+視覺化報表:	圓餅圖、長條圖顯示用戶與訂單資訊 <br>
 
 
