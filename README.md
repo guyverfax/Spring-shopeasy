@@ -54,7 +54,7 @@ src/main/resources/ <br>
 
 # 🔄 程式流程設計（Flow Design）
 以下將以幾個核心功能為例，說明前後端的互動流程與設計邏輯。<br>
-## 🔐 使用者註冊與登入流程<br>
+## 🔐 使用者註冊與登入流程
 [使用者] → (填寫表單) → /auth/register <br>
                ↓<br>
          [RegisterController]<br>
