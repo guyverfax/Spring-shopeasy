@@ -94,7 +94,7 @@ src/main/resources/ <br>
            /order/checkout<br>
                ↓<br>
         [OrderController.checkout()]<br>
-               ↓
+               ↓<br>
   → OrderService.createOrder(user, cart)<br>
        ↓                      ↓<br>
    檢查庫存             建立 Order 與 OrderItem 實體<br>
@@ -105,9 +105,9 @@ src/main/resources/ <br>
 
 ## 📦 管理後台 - 商品新增流程
 [Admin] → adminproduct.html → 上傳商品資料 + 圖片<br>
-               ↓
+               ↓<br>
         [AdminProductController.addProduct()]<br>
-               ↓
+               ↓<br>
      呼叫 ProductService 儲存圖片與商品資訊<br>
                ↓
         → 儲存圖片至資料夾
