@@ -13,6 +13,8 @@
 
 🛍️ 支援購物車、訂單建立與明細紀錄<br>
 
+📊 實作報表視覺化（Chart.js + jQuery）<br>
+
 🧑‍💼 前台 / 後台管理分離設計（一般用戶與管理員功能區分）<br>
 
 🖼️ 圖片上傳與圖片預覽功能整合<br>
@@ -54,7 +56,7 @@ src/main/resources/ <br>
 ## 🔐 使用者註冊與登入流程
 [使用者] → (填寫表單) → /auth/register <br>
                ↓<br>
-         [RegisterController]<br>
+         [UserController]<br>
                ↓<br>
       [UserService.register()]<br>
                ↓<br>
@@ -161,5 +163,11 @@ src/main/resources/ <br>
 
 ## 📦後台主頁-訂單管理
 ![My Image](images/002-後台-訂單管理01.jpg)
+
+## 📦後台主頁-數據報表
+![My Image](images/002-後台-數據報表01.jpg)
+
+## 📦後台主頁-分析圖表
+![My Image](002-後台-分析圖表01.jpg)
 
 # 以上是專案說明
