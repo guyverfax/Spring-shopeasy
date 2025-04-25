@@ -82,7 +82,7 @@ src/main/resources/ <br>
                ↓<br>
          [CartController.addToCart()]<br>
                ↓<br>
-        呼叫 CartService 將商品加入 Session 中的購物車<br>
+        呼叫 CartService 將商品加入購物車<br>
                ↓<br>
       返回購物車頁面（cart.html）顯示商品列表<br>
 
