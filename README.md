@@ -47,7 +47,6 @@ src/main/resources/ <br>
 購物車功能:	加入/移除商品、結帳功能 <br>
 訂單模組:	建立訂單、訂單明細查詢 <br>
 管理後台:	管理會員、訂單、商品、分類、報表 <br>
-視覺化報表:	圓餅圖、長條圖顯示用戶與訂單資訊 <br>
 
 # 🗃 資料庫設計（MySQL）
 ![image](images/資料庫設計.png)
@@ -57,7 +56,7 @@ src/main/resources/ <br>
 ## 🔐 使用者註冊與登入流程
 [使用者] → (填寫表單) → /auth/register <br>
                ↓<br>
-         [RegisterController]<br>
+         [UserController]<br>
                ↓<br>
       [UserService.register()]<br>
                ↓<br>
@@ -164,5 +163,11 @@ src/main/resources/ <br>
 
 ## 📦後台主頁-訂單管理
 ![My Image](images/002-後台-訂單管理01.jpg)
+
+## 📦後台主頁-數據報表
+![My Image](images/002-後台-數據報表01.jpg)
+
+## 📦後台主頁-分析圖表
+![My Image](002-後台-分析圖表01.jpg)
 
 # 以上是專案說明
