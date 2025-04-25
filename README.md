@@ -61,21 +61,18 @@ src/main/resources/ <br>
                ↓<br>
       [UserService.register()]<br>
                ↓<br>
-         驗證帳號、密碼格式<br>
-               ↓<br>
      加密密碼 → 存入資料庫 (UserRepository)<br>
                ↓<br>
     回傳註冊成功 → 導向登入頁面<br>
 
 [使用者] → /auth/login.html → 提交帳密登入 <br>
                ↓<br>
-      [Spring Security Login Filter]<br>
-               ↓<br>
        若帳密正確 → 判斷是否設定二階段驗證<br>
                ↓<br>
    若有設定：導向 /auth/verify-totp.html → 輸入驗證碼<br>
                ↓<br>
-      [TOTPUtil.validateCode()] → 成功 → 登入成功<br>
+      [TOTPUtil.validateCode()] → <br>
+      成功 → 登入成功<br>
 
 ## 🛒 加入購物車流程
 [使用者] → 點選「加入購物車」<br>
