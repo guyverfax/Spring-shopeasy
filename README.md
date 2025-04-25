@@ -61,7 +61,9 @@ src/main/resources/ <br>
                ↓<br>
       [UserService.register()]<br>
                ↓<br>
-     加密密碼 → 存入資料庫 (UserRepository)<br>
+        驗證帳號、密碼格式!<br>
+              ↓<br>
+     存入資料庫 (UserRepository)<br>
                ↓<br>
     回傳註冊成功 → 導向登入頁面<br>
 
